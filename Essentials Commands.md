@@ -48,7 +48,7 @@ The transcript provides an overview of different methods to log into a Linux sys
 
 The transcript emphasizes the importance of understanding different login methods, the historical context of terms like console and terminal, and practical steps to securely log into a Linux system.    
 
-==================================================================================================
+==============================================================================================
 # 2.Login into Local,Remote & Text Mode:Hands_ON 
 
 The transcript details a demonstration of logging into Linux machines using various methods, both locally and remotely. Here are the key points:
@@ -179,3 +179,36 @@ The lecture explains how Linux manages hard links and compares them to soft link
 This approach allows efficient data sharing and management in Linux while ensuring data is only removed when no longer needed by any user.   
 
 ====================================================================================
+# 6.Create & Manage Soft Links
+
+This transcript explains how Linux manages symbolic (soft) links, comparing them to shortcuts in Windows. Here are the key points:
+
+1. **Windows Shortcut Analogy**:
+   - In Windows, a shortcut on the desktop points to an executable file elsewhere on the disk.
+   - Double-clicking the shortcut launches the application.
+
+2. **Soft Links in Linux**:
+   - **Definition**: Soft links are similar to shortcuts; they point to a file path rather than an inode.
+   - **Creation**: Use the `ln -s [target path] [link path]` command to create a soft link.
+   - **Example**: To create a soft link to an image, use `ln -s /home/Aaron/pictures/family_dog.jpg shortcut.jpg`.
+
+3. **Listing and Inspecting Links**:
+   - Use `ls -l` to list files and directories, which shows soft links with an "l" at the beginning and the path they point to.
+   - Use `readlink [link path]` to display the target path of a soft link.
+
+4. **Permissions**:
+   - Soft link permissions are generally not important.
+   - The permissions of the target file apply when accessing through the soft link.
+
+5. **Absolute vs. Relative Paths**:
+   - Absolute paths can break if the directory structure changes.
+   - Relative paths keep the link intact even if the directory names change.
+
+6. **Linking to Directories and Across File Systems**:
+   - Soft links can point to directories.
+   - Soft links can also point to files and directories on different file systems.
+
+By using soft links, you can create flexible and convenient references to files and directories, similar to shortcuts in Windows, without worrying about duplicating data.   
+
+=============================================================================================
+# 7.
